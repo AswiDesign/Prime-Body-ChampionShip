@@ -1,0 +1,318 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: rgb(47, 47, 47);
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+
+/* ====================== PAGE 1 ======================== */
+
+#page1{
+    padding-top: 5%;
+    color: white;
+}
+
+.page1{
+    margin-top: 10%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 .registration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.page1 .registration h3.main{
+    text-align: center;
+    font-size: 250%;
+}
+
+.page1 .registration form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.page1 .registration .a{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+.page1 .registration .b{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+.page1 .registration .c{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+
+/* NAME */
+
+.page1 .registration .name{
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 .registration .name label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .registration .name input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* EMAIL */
+
+.page1 .registration .email{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 .registration .email label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .registration .email input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .email input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* ADDRESS */
+
+.page1 .registration .address{
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 .registration .address label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .registration .address input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .address input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* PINCODE */
+
+.page1 .registration .pin{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 .registration .pin label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .registration .pin input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .pin input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* PHONE NUMBER */
+
+.page1 .registration .phn{
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 .registration .phn label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .registration .phn input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .phn input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* BANK */
+
+.page1 .registration .bank{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 .registration .bank{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .bank label{
+    font-family:cursive;
+    font-size: 23px;
+}
+
+.page1 .registration .bank select{
+    padding:7.8%;
+    width: 149%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .bank select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.page1 .registration a button.submit{
+    border: 1px solid white ;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 15px 75px 15px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.page1 .registration a button.submit:hover{
+    transform: scaleX(1.03);
+    background-color: white;
+    border: none;
+    color: black;
+}

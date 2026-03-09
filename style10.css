@@ -1,0 +1,790 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: rgb(47, 47, 47);
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+header .navbar .middle ul{
+    display: flex;
+    gap: 80px;
+    margin-top: 1%;
+}
+
+header .navbar .middle ul li{
+    list-style: none;
+}
+
+header .navbar .middle ul li a{
+    text-decoration: none;
+    font-size: 240%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease;
+}
+
+header .navbar .middle ul li a:hover,
+header .navbar .middle ul li a.active{
+    color: red;
+}
+
+header .navbar .right a button.buynow{
+    margin-top: 7%;
+    padding: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background-color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+header .navbar .right a button.buynow:hover{
+    background-color: white;
+    color: red;
+    transform: scaleX(1.06);
+}
+
+/* ============================ PAGE 1 ========================= */
+
+#page1{
+    padding-top: 5%;
+    color: white;
+}
+
+.page1{
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 .main1 h3.head{
+    font-size: 540%;
+}
+
+.page1 .main1 h3.head span{
+    color: rgb(245, 98, 98);
+}
+
+/* CARD */
+
+.page1 .main1 h4.prohead{
+    text-align:i;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 220%;
+    color: rgb(255, 255, 255);
+}
+
+/* .page1 .main1 .protein{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+} */
+.page1 .main1 .protein{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-left: 1%;
+}
+
+.page1 .main1 .protein .card{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 60px;
+    border: 1px solid black;
+    width: 303px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.page1 .main1 .protein .card:hover{
+    background-color: rgb(28, 28, 28);
+    box-shadow: 0 0 10px black;
+}
+
+.page1 .main1 .protein .card p.name{
+    text-align: center;
+    margin-top: 1%;
+    font-size: 200%;
+}
+
+.page1 .main1 .protein .card p.use{
+    font-size: 150%;
+    color: rgb(164, 163, 163);
+}
+
+.page1 .main1 .protein .card img{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 250px;
+}
+
+/* Price 1 */
+
+.page1 .main1 .protein .card .price1{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 22%;
+}
+
+.page1 .main1 .protein .card .price1 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main1 .protein .card .price1 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main1 .protein .card .price1 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 2 */
+
+.page1 .main1 .protein .card .price2{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10%;
+}
+
+.page1 .main1 .protein .card .price2 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main1 .protein .card .price2 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main1 .protein .card .price2 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 3 */
+
+.page1 .main1 .protein .card .price3{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 17%;
+}
+
+.page1 .main1 .protein .card .price3 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main1 .protein .card .price3 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main1 .protein .card .price3 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 4 */
+
+.page1 .main1 .protein .card .price4{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.page1 .main1 .protein .card .price4 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main1 .protein .card .price4 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main1 .protein .card .price4 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 5 */
+
+.page1 .main1 .protein .card .price5{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 9%;
+}
+
+.page1 .main1 .protein .card .price5 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main1 .protein .card .price5 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main1 .protein .card .price5 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* MAIN 3 */
+
+.page1 .main2{
+    padding-top: 1.5%;
+}
+
+.page1 .main2 h3.head{
+    font-size: 540%;
+}
+
+.page1 .main2 h3.head span{
+    color: rgb(245, 98, 98);
+}
+
+/* CARD */
+
+.page1 .main2 h4.prohead{
+    text-align:i;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 220%;
+    color: rgb(255, 255, 255);
+}
+
+/* .page1 .main2 .protein{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+} */
+
+.page1 .main2 .protein{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-left: 1%;
+    gap: 10px;
+}
+
+.page1 .main2 .protein .card{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 60px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.page1 .main2 .protein .card:hover{
+    background-color: rgb(28, 28, 28);
+    box-shadow: 0 0 10px black;
+}
+
+.page1 .main2 .protein .card p.name{
+    text-align: center;
+    margin-top: 1%;
+    font-size: 200%;
+}
+
+.page1 .main2 .protein .card p.use{
+    font-size: 150%;
+    color: rgb(164, 163, 163);
+}
+
+.page1 .main2 .protein .card img{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 250px;
+}
+
+/* Price 1 */
+
+.page1 .main2 .protein .card .price1{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 2%;
+}
+
+.page1 .main2 .protein .card .price1 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main2 .protein .card .price1 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main2 .protein .card .price1 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 2 */
+
+.page1 .main2 .protein .card .price2{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10%;
+}
+
+.page1 .main2 .protein .card .price2 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main2 .protein .card .price2 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main2 .protein .card .price2 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 3 */
+
+.page1 .main2 .protein .card .price3{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10%;
+}
+
+.page1 .main2 .protein .card .price3 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main2 .protein .card .price3 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main2 .protein .card .price3 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 4 */
+
+.page1 .main2 .protein .card .price4{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10%;
+}
+
+.page1 .main2 .protein .card .price4 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main2 .protein .card .price4 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main2 .protein .card .price4 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 5 */
+
+.page1 .main2 .protein .card .price5{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top:5%;
+}
+
+.page1 .main2 .protein .card .price5 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main2 .protein .card .price5 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main2 .protein .card .price5 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* MAIN 4 */
+
+.page1 .main3{
+    padding-top: 1.5%;
+}
+
+.page1 .main3 h3.head{
+    font-size: 540%;
+}
+
+.page1 .main3 h3.head span{
+    color: rgb(245, 98, 98);
+}
+
+/* CARD */
+
+.page1 .main3 h4.prohead{
+    text-align:i;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 220%;
+    color: rgb(255, 255, 255);
+}
+
+/* .page1 .main3 .protein{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+} */
+
+.page1 .main3 .protein{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-left: 1%;
+    gap: 10px;
+}
+
+.page1 .main3 .protein .card{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 60px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.page1 .main3 .protein .card:hover{
+    background-color: rgb(28, 28, 28);
+    box-shadow: 0 0 10px black;
+}
+
+.page1 .main3 .protein .card p.name{
+    text-align: center;
+    margin-top: 1%;
+    font-size: 200%;
+}
+
+.page1 .main3 .protein .card p.use{
+    font-size: 150%;
+    color: rgb(164, 163, 163);
+}
+
+.page1 .main3 .protein .card img{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 250px;
+}
+
+/* Price 1 */
+
+.page1 .main3 .protein .card .price1{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 15%;
+}
+
+.page1 .main3 .protein .card .price1 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main3 .protein .card .price1 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main3 .protein .card .price1 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 2 */
+
+.page1 .main3 .protein .card .price2{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 15%;
+}
+
+.page1 .main3 .protein .card .price2 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main3 .protein .card .price2 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main3 .protein .card .price2 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 3 */
+
+.page1 .main3 .protein .card .price3{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 1%;
+}
+
+.page1 .main3 .protein .card .price3 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main3 .protein .card .price3 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main3 .protein .card .price3 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 4 */
+
+.page1 .main3 .protein .card .price4{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 17%;
+}
+
+.page1 .main3 .protein .card .price4 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main3 .protein .card .price4 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main3 .protein .card .price4 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}
+
+/* Price 5 */
+
+.page1 .main3 .protein .card .price5{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top:5%;
+}
+
+.page1 .main3 .protein .card .price5 p.price{
+    margin-top: 2%;
+    font-size: 23px;
+}
+
+.page1 .main3 .protein .card .price5 a button.buy{
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page1 .main3 .protein .card .price5 a button.buy:hover{
+    background-color: rgba(255, 0, 0, 0.401);
+}

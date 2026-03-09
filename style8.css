@@ -1,0 +1,269 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+header .navbar .middle ul{
+    display: flex;
+    gap: 80px;
+    margin-top: 1%;
+}
+
+header .navbar .middle ul li{
+    list-style: none;
+}
+
+header .navbar .middle ul li a{
+    text-decoration: none;
+    font-size: 240%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease;
+}
+
+header .navbar .middle ul li a:hover,
+header .navbar .middle ul li a.active{
+    color: red;
+}
+
+/* ====================== PAGE 1 ========================= */
+
+#page1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.705),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+.page1{
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 h3.sponcers{
+    font-size: 470%;
+    font-family: "Italianno", cursive;
+    font-weight:400;
+}
+
+.page1 .images{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.page1 .images .card{
+    background-color: rgba(91, 91, 91, 0.504);
+    height: 650px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.page1 .images .card img{
+    height: 600px;
+}
+
+.page1 .images .card h4{
+    text-align: center;
+    font-family: "Eagle Lake", cursive;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.page1 h3.trainer{
+    margin-top: 70px;
+    font-size: 470%;
+    font-family: "Italianno", cursive;
+    font-weight:400;
+}
+
+.page1 .images2{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.page1 .images2 .card{
+    cursor: pointer;
+    transition: .3s;
+}
+
+.page1 .images2 .card:hover{
+    transform: scale(1.03);
+}
+
+.page1 .images2 .card img{
+    height: 700px;
+    
+}
+
+.page1 .images2 .card p{
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Eagle Lake", cursive;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+/* QUICK FOCUS */
+
+.quick-view {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 50%; /* below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(rgba(0, 0, 0, 0.388), black);
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 8px;
+  width: 320px;
+  margin-top: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  animation: show-name 1s forwards ;
+  visibility: hidden;
+  opacity: 0;
+  animation-delay: .2s;
+}
+
+@keyframes show-name{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.quick-view h3.name{
+    font-size: 30px;
+}
+
+/* Show quick view when button is hovered or focused */
+.img:hover + .quick-view,
+.img:focus + .quick-view {
+  display: block;
+  
+}
+
+/* ======================== FOOTER ======================== */
+
+/* ======================= PAGE 2 ======================= */
+
+#page2{
+    margin-top: 68vh;
+    background-color: rgb(30, 30, 30);
+    height: 40vh;
+}
+
+.page2{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30%;
+}
+
+.page2 .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-top: 7%;
+}
+
+.page2 .left img{
+    height: 100px;
+}
+
+.page2 .left h3.logo{
+    font-size: 25px;
+}
+
+.page2 .right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 25px;
+    margin-top: 6%;
+}

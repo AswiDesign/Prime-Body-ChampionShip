@@ -1,0 +1,191 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 20%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+header .navbar .middle ul{
+    display: flex;
+    gap: 80px;
+    margin-top: 1%;
+}
+
+header .navbar .middle ul li{
+    list-style: none;
+}
+
+header .navbar .middle ul li a{
+    text-decoration: none;
+    font-size: 240%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease;
+}
+
+header .navbar .middle ul li a:hover{
+    color: red;
+}
+
+/* header .navbar .right{
+    margin-right: 3%;
+}
+
+header .navbar .right button.register{
+    padding: 18%;
+    width: 148%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 110%;
+    border-radius: 13px;
+    color: white;
+    background-color: rgba(88, 88, 88, 0.555);
+    border: none;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+header .navbar .right button.register:hover{
+    background-color: rgba(88, 88, 88, 0.555);
+    transform: scaleX(1.06);
+    color: red;
+} */
+
+/* ===================== PAGE 1 ========================= */
+
+#page1{
+    background-image: url(./image/Fitness\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1{
+    padding-top: 10%;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    backdrop-filter: brightness(.5);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 img{
+    height: 150px;
+}
+
+.page1 h4.logo{
+    font-size: 150px;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page1 h3.head{
+    font-size: 120px;
+}
+
+.page1 p.des{
+    font-size: 40px;
+}
+
+.page1 p.des2{
+    margin-top: 50px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page1 a button.register{
+    margin-top: 40px;
+    padding: 1%;
+    width:20%;
+    font-size: 130%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    border-radius: 17px;
+    color: white;
+    border: 1.5px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.page1 a button.register:hover{
+    background-color: white;
+    border: none;
+    color: black;
+}

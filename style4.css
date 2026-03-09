@@ -1,0 +1,163 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 20%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+header .navbar .middle ul{
+    display: flex;
+    gap: 80px;
+    margin-top: 1%;
+}
+
+header .navbar .middle ul li{
+    list-style: none;
+}
+
+header .navbar .middle ul li a{
+    text-decoration: none;
+    font-size: 240%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease;
+}
+
+header .navbar .middle ul li a:hover,
+header .navbar .middle ul li a.active{
+    color: red;
+}
+
+/*  ======================= PAGE 1 ======================== */
+
+#page1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.577),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+#page1 h3.head{
+    padding-top: 10%;
+    text-align: center;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    font-size: 540%;
+}
+
+.page1{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    gap: 50px;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.page1 .cat1, .cat2, .cat3, .cat4, .cat5{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgb(73, 73, 73);
+    width: 60%;
+    padding: 15px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.page1 .cat1:hover, .cat2:hover, .cat3:hover, .cat4:hover, .cat5:hover{
+    transform: scaleX(1.03);
+    box-shadow: 0 10px 25px rgb(76, 36, 36);
+}
+
+.page1 .cat1 img, .cat2 img, .cat3 img, .cat4 img, .cat5 img{
+    height: 50px;
+}
+
+.page1 .cat1 h4, .cat2 h4, .cat3 h4, .cat4 h4, .cat5 h4{
+    display: flex;
+    align-items: center;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    font-size: 260%;
+    letter-spacing: 2px;
+}

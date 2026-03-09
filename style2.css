@@ -1,0 +1,399 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    width: 20%;
+    margin-left: 45%;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 4%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+/* ===================== PAGE 1 ====================*/
+
+#page1{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 h3{
+    margin-left: 120px;
+    font-size: 600%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page1 p.welco{
+    margin-left: 120px;
+    margin-top: 10px;
+    font-size: 260%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page1 .registration{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1 .registration .a{
+    margin-top: 20px;
+    display: flex;
+    gap: 20vh;
+}
+
+.page1 .registration .b{
+    display: flex;
+    gap: 25vh;
+}
+
+.page1 .registration .c{
+    display: flex;
+    gap: 25vh;
+}
+
+.page1 .registration .d{
+    display: flex;
+    gap: 20vh;
+}
+
+/* NAME */
+
+.page1 .registration .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .name label{
+    font-family:cursive;
+    font-size: 22px;
+}
+.page1 .registration .name input{
+    padding: 9%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* EMAIL */
+
+.page1 .registration .email{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .email label{
+    font-family:cursive;
+    font-size: 22px;
+}
+.page1 .registration .email input{
+    padding: 9%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .email input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* DATE OF BIRTH */
+
+.page1 .registration .dob{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .dob label{
+    font-family:cursive;
+    font-size: 22px;
+}
+.page1 .registration .dob input{
+    padding: 9%;
+    width: 220%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .dob input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* GENDER */
+
+.page1 .registration .gender{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .gender label{
+    font-family:cursive;
+    font-size: 22px;
+}
+
+.page1 .registration .gender select{
+    padding: 16%;
+    width: 420%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .gender select option{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* CATEGORY */
+
+.page1 .registration .category{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .category label{
+    font-family:cursive;
+    font-size: 22px;
+}
+
+.page1 .registration .category select{
+    padding: 9%;
+    width: 250%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .category select option{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* LEVEL */
+
+.page1 .registration .level{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .level label{
+    font-family:cursive;
+    font-size: 22px;
+}
+
+.page1 .registration .level select{
+    padding: 16%;
+    width: 380%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .level select option{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* WEIGHT */
+
+.page1 .registration .weight{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .weight label{
+    font-family:cursive;
+    font-size: 22px;
+}
+.page1 .registration .weight input{
+    padding: 9%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .weight input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* HEIGHT */
+
+.page1 .registration .height{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .height label{
+    font-family:cursive;
+    font-size: 22px;
+}
+.page1 .registration .height input{
+    padding: 9%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .registration .height input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+.page1 a button.register{
+    margin-left: 140px;
+    margin-top: 30px;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.page1 a button.register:hover{
+    transform: scaleX(1.03);
+    border: none;
+    color: black;
+    background-color: white;
+}

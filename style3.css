@@ -1,0 +1,341 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+header .navbar .middle ul{
+    display: flex;
+    gap: 80px;
+    margin-top: 1%;
+}
+
+header .navbar .middle ul li{
+    list-style: none;
+}
+
+header .navbar .middle ul li a{
+    text-decoration: none;
+    font-size: 240%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease;
+}
+
+header .navbar .middle ul li a:hover,
+header .navbar .middle ul li a.active{
+    color: red;
+}
+
+/* ===========POPUP============= */
+
+#popup1{
+    display: none;
+    position: relative;  
+    z-index: 10;   
+    position: absolute;
+    padding-left: 40%;
+    display: none;
+    width: 800px;
+    
+}
+
+#popup1:target{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: rgba(0, 0, 0, 0.545);
+    justify-content: center;
+    inset: 0;
+    text-align: center;
+    padding: 30px;
+    padding-left: 600px;
+    padding-top: 15%;
+    padding-right: 800px ;
+    padding-bottom: 320vh;
+    width: 900px;
+    height: 400px;
+    color: white;
+   
+}
+
+#popup1 h4 span{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+#popup1 h4{
+    margin-bottom: 50px;
+}
+
+.popup1{
+    background-color: rgba(58, 58, 58, 0.868);
+    padding: 80px;
+    width: 900px;
+    border-radius: 20px;
+}
+
+
+#popup1 a{
+    text-decoration: none;
+    color: white;
+}
+
+#popup1 a:hover{
+    color: red;
+}
+
+/* =============================== */
+
+/* ===================== PAGE 1 ========================= */
+
+#page1{
+    background-image: url(./image/fitness\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page1 a.down{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 2%;
+    margin-top: 4%;
+}
+
+#page1 a.down i{
+    text-decoration: none;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    transition: .2s ease;
+}
+
+#page1 a.down i:hover{
+    color: red;
+    transform: scale(1.05);
+}
+
+.page1{
+    backdrop-filter: blur(2px);
+    backdrop-filter: brightness(.5);
+    padding-top: 7%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .4s;
+}
+
+.page1 h4.head{
+    margin-top: 16%;
+    font-size: 500%;
+}
+
+.page1 p.para{
+    margin-top: 1%;
+    text-align: center;
+    font-size: 200%;
+}
+
+.page1 a#reg button.apply{
+    margin-top: 100px;
+    padding: 20%;
+    width: 180%;
+    font-size: 130%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    border-radius: 17px;
+    color: white;
+    border: 1.5px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.page1 a#reg button.apply:hover{
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+
+/* =========================== PAGE 2 ============================ */
+
+#page2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.499),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+    color: white;
+    
+}
+
+.page2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6%;
+    backdrop-filter: blur(3px);
+    backdrop-filter: brightness(.6);
+    height: 90%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .6s;
+}
+
+.page2 h3.head{
+    font-size: 240%;
+}
+
+.page2 .images{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.page2 .images .card{
+    margin-top: 3%;
+    background-color: aquamarine;
+    height: 470px;
+    width: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 0 0 10px grey;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.page2 .images .card:hover{
+    transform: scale(1.02);
+}
+
+.page2 .images .card img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ======================== FOOTER ======================== */
+
+/* ======================= PAGE 3 ======================= */
+
+#page3{
+    background-color: rgb(30, 30, 30);
+    height: 40vh;
+}
+
+.page3{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30%;
+}
+
+.page3 .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-top: 7%;
+}
+
+.page3 .left img{
+    height: 100px;
+}
+
+.page3 .left h3.logo{
+    font-size: 25px;
+}
+
+.page3 .right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 25px;
+    margin-top: 6%;
+}

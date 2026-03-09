@@ -1,0 +1,1722 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+    overflow: hidden;
+}
+
+/* =================== NAVBAR ======================= */
+
+header{
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .2%;
+    padding: .9%;
+    width: 97%;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes show-navbar{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .navbar .left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 10%;
+}
+
+header .navbar .left img{
+    height: 50px;
+}
+
+header .navbar .left a{
+    text-decoration: none;
+}
+
+header .navbar .left h3.logo{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: 6%;
+    color: white;
+    font-family: "Eagle Lake", cursive;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+header .navbar .left h3.logo:hover{
+    color: red;
+}
+
+header .navbar .middle ul{
+    display: flex;
+    gap: 80px;
+    margin-top: 1%;
+}
+
+header .navbar .middle ul li{
+    list-style: none;
+}
+
+header .navbar .middle ul li a{
+    text-decoration: none;
+    font-size: 240%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease;
+}
+
+header .navbar .middle ul li a:hover,
+header .navbar .middle ul li a.active{
+    color: red;
+}
+
+/* ======================= PAGE 1 ======================== */
+
+#page1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.523),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page1{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 190px;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-navbar 1s forwards;
+    animation-delay: .5s;
+}
+
+.page1 .left h3.head{
+    font-size: 540%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page1 .left p{
+    width: 1000px;
+    font-size: 160%;
+    font-family: "Eagle Lake", cursive;
+}
+
+.page1 .left p span {
+    font-size: 130%;
+}
+
+.page1 .right .registration{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page1 .right .registration .a{
+    display: flex;
+    gap: 17vh;
+}
+.page1 .right .registration .b{
+    display: flex;
+    gap: 17vh;
+}
+.page1 .right .registration .c{
+    display: flex;
+    gap: 17vh;
+}
+
+/* NAME */
+
+.page1 .right .registration .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .right .registration .name label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .right .registration .name input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .right .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* DATE OF BIRTH */
+
+.page1 .registration .dob{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .registration .dob label{
+    font-family:cursive;
+    font-size: 23px;
+}
+
+.page1 .registration .dob input{
+    padding: 12%;
+    width: 169%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+/* GENDER */
+
+.page1 .right .registration .gender{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .right .registration .gender label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page1 .right .registration .gender select{
+    padding:22%;
+    width: 278%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .right .registration .gender select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* HEIGHT */
+
+.page1 .right .registration .height{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .right .registration .height label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page1 .right .registration .height input{
+    padding: 10%;
+    width: 186%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .right .registration .height input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* WEIGHT */
+
+.page1 .right .registration .weight{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .right .registration .weight label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page1 .right .registration .weight input{
+    padding: 10%;
+    width: 166%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .right .registration .weight input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* LEVEL */
+
+.page1 .right .registration .level{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .right .registration .level label{
+    font-family:cursive;
+    font-size: 24px;
+}
+
+.page1 .right .registration .level select{
+    padding: 10%;
+    width: 150%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .right .registration .level select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* NUMBER */
+
+.page1 .right .registration .number{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1 .right .registration .number label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page1 .right .registration .number input{
+    padding: 4%;
+    width: 108%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page1 .right .registration .number input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* APPLY */
+
+
+.page1 .right .registration a{
+    text-decoration: none;
+}
+
+.page1 .right .registration a button.apply{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.page1 .right .registration a button.apply:hover{
+    transform: scaleX(1.04);
+    background-color: white;
+    color: black;
+}
+
+/* ======================= PAGE 2 ============================ */
+
+#page2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.523),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ======================= PAGE 1 ======================== */
+
+#page2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.523),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page2{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 290px;
+}
+
+.page2 .left h3.head{
+    font-size: 540%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page2 .left p{
+    width: 1000px;
+    font-size: 160%;
+    font-family: "Eagle Lake", cursive;
+}
+
+.page2 .left p span {
+    font-size: 130%;
+}
+
+.page2 .right .registration{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page2 .right .registration .a{
+    display: flex;
+    gap: 17vh;
+}
+.page2 .right .registration .b{
+    display: flex;
+    gap: 17vh;
+}
+.page2 .right .registration .c{
+    display: flex;
+    gap: 17vh;
+}
+
+/* NAME */
+
+.page2 .right .registration .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .right .registration .name label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page2 .right .registration .name input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page2 .right .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* DATE OF BIRTH */
+
+.page2 .registration .dob{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .registration .dob label{
+    font-family:cursive;
+    font-size: 23px;
+}
+
+.page2 .registration .dob input{
+    padding: 12%;
+    width: 169%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+/* GENDER */
+
+.page2 .right .registration .gender{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .right .registration .gender label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page2 .right .registration .gender select{
+    padding:22%;
+    width: 278%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page2 .right .registration .gender select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* HEIGHT */
+
+.page2 .right .registration .height{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .right .registration .height label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page2 .right .registration .height input{
+    padding: 10%;
+    width: 186%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page2 .right .registration .height input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* WEIGHT */
+
+.page2 .right .registration .weight{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .right .registration .weight label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page2 .right .registration .weight input{
+    padding: 10%;
+    width: 166%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page2 .right .registration .weight input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* LEVEL */
+
+.page2 .right .registration .level{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .right .registration .level label{
+    font-family:cursive;
+    font-size: 24px;
+}
+
+.page2 .right .registration .level select{
+    padding: 10%;
+    width: 150%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page2 .right .registration .level select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.page2 .right .registration a{
+    text-decoration: none;
+}
+
+/* NUMBER */
+
+.page2 .right .registration .number{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page2 .right .registration .number label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page2 .right .registration .number input{
+    padding: 4%;
+    width: 108%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page2 .right .registration .number input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* APPLY */
+
+.page2 .right .registration a button.apply{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+/* UPLOAD */
+
+.page2 .right .registration .image {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page2 .right .registration .image label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page2 .right .registration .image input{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page2 .right .registration .image input::file-selector-button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.page2 .right .registration .image input::file-selector-button:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.page2 .right .registration a button.apply:hover{
+    transform: scaleX(1.04);
+    background-color: white;
+    color: black;
+}
+
+/* ====================== PAGE 3 ========================= */
+
+#page3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.523),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page3{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 290px;
+}
+
+.page3 .left h3.head{
+    font-size: 540%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page3 .left p{
+    width: 1000px;
+    font-size: 160%;
+    font-family: "Eagle Lake", cursive;
+}
+
+.page3 .left p span {
+    font-size: 130%;
+}
+
+.page3 .right .registration{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page3 .right .registration .a{
+    display: flex;
+    gap: 17vh;
+}
+.page3 .right .registration .b{
+    display: flex;
+    gap: 17vh;
+}
+.page3 .right .registration .c{
+    display: flex;
+    gap: 17vh;
+}
+
+/* NAME */
+
+.page3 .right .registration .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .right .registration .name label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page3 .right .registration .name input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page3 .right .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* DATE OF BIRTH */
+
+.page3 .registration .dob{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .registration .dob label{
+    font-family:cursive;
+    font-size: 23px;
+}
+
+.page3 .registration .dob input{
+    padding: 12%;
+    width: 169%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+/* GENDER */
+
+.page3 .right .registration .gender{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .right .registration .gender label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page3 .right .registration .gender select{
+    padding:22%;
+    width: 278%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page3 .right .registration .gender select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* HEIGHT */
+
+.page3 .right .registration .height{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .right .registration .height label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page3 .right .registration .height input{
+    padding: 10%;
+    width: 185%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page3 .right .registration .height input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* WEIGHT */
+
+.page3 .right .registration .weight{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .right .registration .weight label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page3 .right .registration .weight input{
+    padding: 10%;
+    width: 166%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page3 .right .registration .weight input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* LEVEL */
+
+.page3 .right .registration .level{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .right .registration .level label{
+    font-family:cursive;
+    font-size: 24px;
+}
+
+.page3 .right .registration .level select{
+    padding: 10%;
+    width: 150%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page3 .right .registration .level select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* NUMBER */
+
+.page3 .right .registration .number{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page3 .right .registration .number label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page3 .right .registration .number input{
+    padding: 4%;
+    width: 108%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page3 .right .registration .number input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* APPLY */
+
+.page3 .right .registration a{
+    text-decoration: none;
+}
+
+.page3 .right .registration a button.apply{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+/* UPLOAD */
+
+.page3 .right .registration .image {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page3 .right .registration .image label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page3 .right .registration .image input{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page3 .right .registration .image input::file-selector-button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.page3 .right .registration .image input::file-selector-button:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.page3 .right .registration a button.apply:hover{
+    transform: scaleX(1.04);
+    background-color: white;
+    color: black;
+}
+
+/* ========================== PAGE 4 ====================================*/
+
+#page4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.523),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page4{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 290px;
+}
+
+.page4 .left h3.head{
+    font-size: 540%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page4 .left p{
+    width: 1000px;
+    font-size: 160%;
+    font-family: "Eagle Lake", cursive;
+}
+
+.page4 .left p span {
+    font-size: 130%;
+}
+
+.page4 .right .registration{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page4 .right .registration .a{
+    display: flex;
+    gap: 17vh;
+}
+.page4 .right .registration .b{
+    display: flex;
+    gap: 17vh;
+}
+.page4 .right .registration .c{
+    display: flex;
+    gap: 17vh;
+}
+
+/* NAME */
+
+.page4 .right .registration .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .right .registration .name label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page4 .right .registration .name input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page4 .right .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* DATE OF BIRTH */
+
+.page4 .registration .dob{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .registration .dob label{
+    font-family:cursive;
+    font-size: 23px;
+}
+
+.page4 .registration .dob input{
+    padding: 12%;
+    width: 168%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+/* GENDER */
+
+.page4 .right .registration .gender{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .right .registration .gender label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page4 .right .registration .gender select{
+    padding:22%;
+    width: 278%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page4 .right .registration .gender select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* HEIGHT */
+
+.page4 .right .registration .height{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .right .registration .height label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page4 .right .registration .height input{
+    padding: 10%;
+    width: 185%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page4 .right .registration .height input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* WEIGHT */
+
+.page4 .right .registration .weight{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .right .registration .weight label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page4 .right .registration .weight input{
+    padding: 10%;
+    width: 166%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page4 .right .registration .weight input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* LEVEL */
+
+.page4 .right .registration .level{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .right .registration .level label{
+    font-family:cursive;
+    font-size: 24px;
+}
+
+.page4 .right .registration .level select{
+    padding: 10%;
+    width: 150%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page4 .right .registration .level select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* NUMBER */
+
+.page4 .right .registration .number{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page4 .right .registration .number label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page4 .right .registration .number input{
+    padding: 4%;
+    width: 108%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page4 .right .registration .number input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* APPLY */
+
+.page4 .right .registration a{
+    text-decoration: none;
+}
+
+.page4 .right .registration a button.apply{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+/* UPLOAD */
+
+.page4 .right .registration .image {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page4 .right .registration .image label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page4 .right .registration .image input{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page4 .right .registration .image input::file-selector-button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.page4 .right .registration .image input::file-selector-button:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.page4 .right .registration a button.apply:hover{
+    transform: scaleX(1.04);
+    background-color: white;
+    color: black;
+}
+
+/* ======================= PAGE 5 ======================== */
+
+#page5{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.523),rgb(0, 0, 0)), url(./image/Fitness2\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page5{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 290px;
+}
+
+.page5 .left h3.head{
+    font-size: 540%;
+    font-family: "Italianno", cursive;
+    font-weight: 500;
+}
+
+.page5 .left p{
+    width: 1000px;
+    font-size: 160%;
+    font-family: "Eagle Lake", cursive;
+}
+
+.page5 .left p span {
+    font-size: 130%;
+}
+
+.page5 .right .registration{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page5 .right .registration .a{
+    display: flex;
+    gap: 17vh;
+}
+.page5 .right .registration .b{
+    display: flex;
+    gap: 17vh;
+}
+.page5 .right .registration .c{
+    display: flex;
+    gap: 14vh;
+}
+
+/* NAME */
+
+.page5 .right .registration .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .name label{
+    font-family:cursive;
+    font-size: 25px;
+}
+.page5 .right .registration .name input{
+    padding: 10%;
+    width: 160%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .name input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* DATE OF BIRTH */
+
+.page5 .registration .dob{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .registration .dob label{
+    font-family:cursive;
+    font-size: 23px;
+}
+
+.page5 .registration .dob input{
+    padding: 12%;
+    width: 220%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+/* GENDER */
+
+.page5 .right .registration .gender{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .gender label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page5 .right .registration .gender select{
+    padding:22%;
+    width: 278%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .gender select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* HEIGHT */
+
+.page5 .right .registration .height{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .height label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page5 .right .registration .height input{
+    padding: 10%;
+    width: 226%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .height input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* WEIGHT */
+
+.page5 .right .registration .weight{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .weight label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page5 .right .registration .weight label span{
+    font-size: 15px;
+}
+.page5 .right .registration .weight input{
+    padding: 7%;
+    width: 126%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .weight input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* LEVEL */
+
+.page5 .right .registration .level{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .level label{
+    font-family:cursive;
+    font-size: 24px;
+}
+
+.page5 .right .registration .level select{
+    padding: 10%;
+    width: 150%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .level select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* NUMBER */
+
+.page5 .right .registration .number{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .number label{
+    font-family:cursive;
+    font-size: 25px;
+}
+
+.page5 .right .registration .number input{
+    padding: 3%;
+    width: 108%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .number input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgb(132, 130, 130);
+}
+
+/* BEST */
+
+.page5 .right .registration .best{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page5 .right .registration .best label{
+    font-family:cursive;
+    font-size: 24px;
+}
+
+.page5 .right .registration .best select{
+    padding: 3%;
+    width: 115%;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.page5 .right .registration .best select option{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* APPLY */
+
+.page5 .right .registration a{
+    text-decoration: none;
+}
+
+.page5 .right .registration a button.apply{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
