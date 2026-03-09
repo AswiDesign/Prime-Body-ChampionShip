@@ -120,7 +120,7 @@ header .navbar .right button.register:hover{
 /* ===================== PAGE 1 ========================= */
 
 #page1{
-    background-image: url(./image/Fitness\ BG.jpg);
+    background-image: url(./image/fitness\ BG.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,4 +188,5 @@ header .navbar .right button.register:hover{
     background-color: white;
     border: none;
     color: black;
+
 }
